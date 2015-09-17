@@ -1,10 +1,4 @@
 var React = require('react');
-var DOM = React.DOM;
-var body = DOM.body;
-var div = DOM.div;
-var script = DOM.script;
-
-var browserify = require('browserify');
 
 var TodoBox = React.createClass({
   render: function () {
@@ -51,8 +45,10 @@ var Todo = React.createClass({
   },
 
   render: function () {
+    var rowStyle = this.state.checked ? style.checkedTodo : style.notCheckedTodo;
+
     return (
-      <tr>
+      <tr style={rowStyle}>
         <td style={style.tableContent}><input type="checkbox" checked={this.state.checked} onChange={this.handleChange} /></td>
         <td style={style.tableContent}>{this.props.title}</td>
         <td style={style.tableContent}>{this.props.children}</td>
@@ -72,6 +68,12 @@ var TodoForm = React.createClass({
 });
 
 var style = {
+  checkedTodo: {
+    textDecoration: 'line-through'
+  },
+  notCheckedTodo: {
+    textDecoration: 'none'
+  },
   tableContent: {
     border: '1px solid black'
   }
