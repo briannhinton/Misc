@@ -1,27 +1,35 @@
 var React = require('react');
+var DOM = React.DOM;
+var body = DOM.body;
+var div = DOM.div;
+var script = DOM.script;
+
+var browserify = require('browserify');
 
 var TodoBox = React.createClass({
-  render: function() {
-      return (
-        <div className="todoBox">
-          <h1>Todos</h1>
-	         <TodoList />
-           <TodoForm />
-        </div>
-      );
+  render: function () {
+    return (
+      <div className="todoBox">
+        <h1>Todos</h1>
+        <TodoList data={this.props.data} />
+        <TodoForm />
+      </div>
+    );
   }
 });
 
 var TodoList = React.createClass({
-  render: function() {
+  render: function () {
+    var todos = this.props.data.map(function (todo) {
+      return <Todo title={todo.title} key={todo.title}>{todo.detail}</Todo>;
+    });
     return (
-      <div className = "todoList">
+      <div className="todoList">
         <table style={{border: "2px solid black"}}>
-  	       <tbody>
-            <Todo title="Shopping">Milk</Todo>
-	          <Todo title="Hair cut">13:00</Todo>
+          <tbody>
+            {todos}
           </tbody>
-	       </table>
+        </table>
       </div>
     );
   }
@@ -29,17 +37,20 @@ var TodoList = React.createClass({
 
 var Todo = React.createClass({
   propTypes: {
-    title: React.PropTypes.number.isRequired
+    title: React.PropTypes.string.isRequired
   },
-  getInitialState: function() {
-    return {
-      checked: false
-    };
+
+  getInitialState: function () {
+    return { checked: false };
   },
-  handleChange: function(e) {
-    this.setState({checked: e.target.checked});
+
+  handleChange: function () {
+    this.setState({
+      checked: !this.state.checked
+    });
   },
-  render: function() {
+
+  render: function () {
     return (
       <tr>
         <td style={style.tableContent}><input type="checkbox" checked={this.state.checked} onChange={this.handleChange} /></td>
@@ -51,9 +62,9 @@ var Todo = React.createClass({
 });
 
 var TodoForm = React.createClass({
-  render: function() {
+  render: function () {
     return (
-      <div className = "todoForm">
+      <div className="todoForm">
         I am a TodoForm.
       </div>
     );
@@ -62,7 +73,7 @@ var TodoForm = React.createClass({
 
 var style = {
   tableContent: {
-    border: "1px solid black"
+    border: '1px solid black'
   }
 };
 
