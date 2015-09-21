@@ -1,0 +1,9 @@
+render(props, context) {
+  const notes = this.props.notes;
+  const style = {
+    margin: '0.5em',
+    paddingLeft: 0,
+    ...
+  };
+  return <ul style={style}>{notes.map(this.renderNote)}</ul>;
+}

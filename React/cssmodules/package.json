@@ -1,0 +1,19 @@
+{
+  "name": "styling",
+  "version": "0.4.1",
+  "description": "Style components with JavaScript",
+  "main": "index.js",
+  "browser": "browser.js",
+  "webpackLoader": "loader.js",
+  "author": "Andrey Popp <8mayday@gmail.com>",
+  "license": "MIT",
+  "repository": "andreypopp/styling",
+  "keywords": [
+    "webpack",
+    "webpack-loader",
+    "css-modules",
+    "css",
+    "style"
+  ],
+  "dependencies": {}
+}

@@ -1,0 +1,6 @@
+import '../assets/css/style.css';
+render(props, context) {
+  const notes = this.props.notes;
+
+  return <ul className='notes'>{notes.map(this.renderNote)}</ul>;
+}

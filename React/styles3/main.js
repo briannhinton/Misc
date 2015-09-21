@@ -3,5 +3,5 @@ import React from 'react';
 import External from './src/components/external';
 
 // render react content to index.html file at <div id="app"/>
-React.render(<External content='hello worlds' />,
+React.render(<External content='hello world' />,
 document.getElementById('app'));

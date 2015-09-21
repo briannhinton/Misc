@@ -1,0 +1,26 @@
+#wrapper {
+	max-width: 880px;
+	margin: 0 auto;
+	padding: 100px 40px 100px 40px;
+}
+
+#wrapper.post {
+	max-width: 880px;
+}
+
+@media screen and (max-width: 540px) {
+	#wrapper { padding: 20px 40px; }
+	header { margin-bottom: 40px; }
+	h1 { font-size: 17px; }
+	footer { margin-top: 40px; padding-bottom: 20px; }
+}
+
+@media screen and (max-width:440px) {
+	#thumbnails a:nth-child(n) {
+		width: 100%;
+		max-width: 300px;
+		margin: 0 auto;
+		margin-top: 20px;
+		display: inline-block;
+		float: none;
+	}

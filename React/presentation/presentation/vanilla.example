@@ -1,0 +1,4 @@
+{
+  test: /\.css$/,
+  loaders: ['style', 'css']
+}

@@ -3,7 +3,7 @@ import Radium from 'radium';
 
 const styles = {
   base: {
-    background: 'red',
+    background: 'blue',
     border: 0,
     borderRadius: 4,
     color: 'white',
