@@ -20,7 +20,7 @@ export default class extends React.Component {
             Styles
           </Heading>
           <Text bold caps textColor="tertiary">Download files on Github</Text>
-          <Text textSize="1.5em" margin="20px 0px 0px" bold>github.com/briannhinton/Misc/tree/master/React</Text>
+          <Text textSize="1.5em" margin="20px 0px 0px" bold>https://github.com/briannhinton/Misc</Text>
         </Slide>
         <Slide transition={['slide']} bgColor="primary" notes="You can even put notes on your slide. How awesome is that?">
           <Heading size={1} fit textColor="secondary" textFont="secondary">

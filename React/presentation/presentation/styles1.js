@@ -3,7 +3,7 @@ import React from 'react';
 // style object
 const styles = {
   borderRadius: '1rem',
-  border: '1px solid green',
+  border: '1px solid red',
   fontFamily: 'sans-serif',
   fontSize: '1.3rem',
   textAlign: 'center'

@@ -7,7 +7,8 @@ const styles = {
     border: 0,
     borderRadius: 4,
     color: 'white',
-    padding: '1.5em'
+    padding: '1.5em',
+    margin: '5em'
   },
   one: {
     ':hover': {
