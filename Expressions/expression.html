@@ -1,0 +1,34 @@
+<script>
+// expression uses: validations ( phone numbers, email, passwords, etc.) or searching (words in sentence, unwanted characters, extracting sections, replacing/cleaning/formatting)
+
+
+// var chars = "407-555-3820";
+//
+// // match 407 or 321
+// if (chars.match(/407|321/)) {
+//   console.log("Its a match!");
+// } else {
+//   console.log("No match here");
+// }
+
+
+// var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+// var regexp = /[A-E]/gi;
+// var matches_array = str.match(regexp);
+//
+// console.log(matches_array);
+// // ['A', 'B', 'C', 'D', 'E', 'a', 'b', 'c', 'd', 'e']
+
+// match only works on string
+
+function chars(x) {
+  if (x.match(/407|321/)) {
+    return console.log("Its a match!");
+  } else {
+    return console.log("No match here!");
+  }
+}
+
+chars("321");
+
+</script>
