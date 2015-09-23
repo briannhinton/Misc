@@ -1,0 +1,20 @@
+<div id="input">
+  <!-- text will go here from the below function-->
+</div>
+
+
+
+<script>
+function code(e) {
+    e = e || window.event;
+    return(e.keyCode || e.which);
+}
+window.onload = function(){
+    document.onkeypress = function(e){
+        var key = code(e);
+        console.log(key);
+        var res = String.fromCharCode(key);
+        console.log(res);
+    };
+};
+</script>
