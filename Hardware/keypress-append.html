@@ -22,8 +22,15 @@ window.onload = function(){
         // log key press text
         console.log(res);
 
-        // outputs the keypress text to div
-        document.getElementById("input").innerHTML=res;
+        // create a paragraph node and assign to variable
+        var node = document.createElement("p");
+
+        // create text node from keypress
+        var textnode = document.createTextNode(res);
+
+        // append to node
+        node.appendChild(textnode);
+        document.getElementById("input").appendChild(node);
     };
 };
 </script>
