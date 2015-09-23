@@ -11,10 +11,21 @@ function code(e) {
 }
 window.onload = function(){
     document.onkeypress = function(e){
+
+        // place key press into variable for use
         var key = code(e);
+
+        // log CharCode of key being pressed
         console.log(key);
+
+        // convert keypress CharCode to string
         var res = String.fromCharCode(key);
+
+        // log key press text
         console.log(res);
+
+        // outputs the keypress text to div
+        document.getElementById("input").innerHTML=res;
     };
 };
 </script>
