@@ -1,0 +1,24 @@
+{
+  "name": "jest-tutorial",
+  "version": "0.0.1",
+  "description": "Simple Jest example",
+  "dependencies": {
+    "react": "0.13.x",
+    "react-tools": "0.13.x"
+  },
+  "devDependencies": {
+    
+    "babel-jest": "*",
+    "jest-cli": "*"
+  },
+  "scripts" : {
+    "test" : "jest"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react",
+      "<rootDir>/node_modules/react-tools"
+    ]
+  }
+}
